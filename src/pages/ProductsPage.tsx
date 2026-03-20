@@ -1,4 +1,5 @@
-import { Cloud, Database, Layers, BarChart3, ExternalLink, CheckCircle2 } from 'lucide-react'
+import { useState } from 'react'
+import { Cloud, Database, Layers, BarChart3, ExternalLink, CheckCircle2, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import ScrollReveal from '@/components/common/ScrollReveal'
 
@@ -42,6 +43,8 @@ const products = [
 ]
 
 export default function ProductsPage() {
+  const [showTip, setShowTip] = useState(false)
+
   return (
     <main>
       {/* Hero */}
@@ -119,12 +122,36 @@ export default function ProductsPage() {
             <p className="section-subtitle mx-auto mb-10">
               联系我们的顾问团队，为您量身推荐最适合的解决方案
             </p>
-            <a href="/contact">
-              <Button variant="premium" size="xl" className="font-display">获取专属方案</Button>
-            </a>
+            <Button variant="premium" size="xl" className="font-display" onClick={() => setShowTip(true)}>获取专属方案</Button>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Tip Modal */}
+      {showTip && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-foreground/40 backdrop-blur-md" onClick={() => setShowTip(false)} />
+          <div className="relative glass-card rounded-2xl p-10 max-w-md w-full text-center animate-fade-up">
+            <button
+              onClick={() => setShowTip(false)}
+              className="absolute top-5 right-5 p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-smooth"
+              aria-label="关闭"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="w-18 h-18 rounded-full bg-gradient-primary flex items-center justify-center mx-auto mb-7" style={{ width: '4.5rem', height: '4.5rem' }}>
+              <CheckCircle2 className="w-9 h-9 text-primary-foreground" />
+            </div>
+            <h3 className="text-2xl font-semibold text-foreground mb-3 font-display">温馨提示</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              此功能尚未开发，敬请期待！
+            </p>
+            <Button variant="premium" className="mt-8 font-display" onClick={() => setShowTip(false)}>
+              我知道了
+            </Button>
+          </div>
+        </div>
+      )}
     </main>
   )
 }

@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero noise-overlay">
       {/* Background image with blend */}
       <img
-        src="/images/hero-bg.png"
+        src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
         alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity"
       />

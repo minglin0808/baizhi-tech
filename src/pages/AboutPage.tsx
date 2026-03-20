@@ -28,7 +28,7 @@ export default function AboutPage() {
       <section className="relative pt-36 pb-24 overflow-hidden bg-gradient-hero noise-overlay">
         <div className="absolute inset-0 grid-bg opacity-40" />
         <div className="absolute inset-0">
-          <img src="/images/about-illustration.png" alt="" className="w-full h-full object-cover opacity-15 mix-blend-luminosity" />
+          <img src={`${import.meta.env.BASE_URL}images/about-illustration.png`} alt="" className="w-full h-full object-cover opacity-15 mix-blend-luminosity" />
         </div>
         <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-primary/8 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 left-1/3 w-56 h-56 bg-accent-purple/6 rounded-full blur-[100px]" />
@@ -74,7 +74,7 @@ export default function AboutPage() {
             <ScrollReveal delay={200}>
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-card-hover border border-border">
-                  <img src="/images/about-illustration.png" alt="柏枝科技 - 企业数字化转型" className="w-full h-auto" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}images/about-illustration.png`} alt="柏枝科技 - 企业数字化转型" className="w-full h-auto" loading="lazy" />
                 </div>
                 <div className="absolute -top-6 -right-6 w-28 h-28 rounded-2xl bg-gradient-primary opacity-15 blur-2xl" />
                 <div className="absolute -bottom-6 -left-6 w-36 h-36 rounded-2xl bg-accent-purple/15 blur-2xl" />

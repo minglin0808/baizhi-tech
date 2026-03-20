@@ -36,7 +36,7 @@ export default function Navbar() {
     >
       <nav className="section-container flex items-center justify-between h-16 lg:h-20">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src="/images/logo.png" alt="柏枝科技" className="h-8 w-8 rounded-md" />
+          <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="柏枝科技" className="h-8 w-8 rounded-md" />
           <span className="text-lg font-bold text-gradient-primary font-display">柏枝科技</span>
         </Link>
 

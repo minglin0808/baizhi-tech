@@ -22,7 +22,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <img src="/images/logo.png" alt="柏枝科技" className="h-8 w-8 rounded-md" />
+              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="柏枝科技" className="h-8 w-8 rounded-md" />
               <span className="text-lg font-bold text-gradient-primary">柏枝科技</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
