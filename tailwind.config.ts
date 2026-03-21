@@ -17,8 +17,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        display: ['Outfit', '"Noto Sans SC"', 'system-ui', 'sans-serif'],
-        sans: ['"DM Sans"', '"Noto Sans SC"', 'system-ui', 'sans-serif'],
+        display: ['system-ui', '-apple-system', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+        sans: ['system-ui', '-apple-system', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
