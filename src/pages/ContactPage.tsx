@@ -13,7 +13,7 @@ export default function ContactPage() {
     if (!formData.name.trim()) newErrors.name = '请输入您的姓名'
     if (!formData.phone.trim()) newErrors.phone = '请输入您的电话'
     else if (!/^1[3-9]\d{9}$/.test(formData.phone.trim())) newErrors.phone = '请输入正确的手机号'
-    if (!formData.company.trim()) newErrors.company = '请输入公司名称'
+    if (!formData.company.trim()) newErrors.company = '请输入您的公司名称'
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
@@ -94,7 +94,7 @@ export default function ContactPage() {
                   {[
                     { id: 'name', label: '姓名', type: 'text', placeholder: '请输入您的姓名' },
                     { id: 'phone', label: '电话', type: 'tel', placeholder: '请输入您的手机号' },
-                    { id: 'company', label: '公司名称', type: 'text', placeholder: '请输入公司名称' },
+                    { id: 'company', label: '公司名称', type: 'text', placeholder: '请输入您的公司名称' },
                   ].map((field) => (
                     <div key={field.id}>
                       <label htmlFor={field.id} className="block text-sm font-medium text-foreground mb-2 font-display">
